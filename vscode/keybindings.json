@@ -1,0 +1,70 @@
+// Place your key bindings in this file to override the defaultsauto[]
+[
+    {
+        "key": "cmd+[Slash]",
+        "command": "editor.action.addCommentLine",
+        "when": "editorTextFocus && !editorReadonly"
+    },
+    {
+        "key": "cmd+k cmd+c",
+        "command": "-editor.action.addCommentLine",
+        "when": "editorTextFocus && !editorReadonly"
+    },
+    {
+        "key": "cmd+[Slash]",
+        "command": "editor.action.removeCommentLine",
+        "when": "editorTextFocus && !editorReadonly"
+    },
+    {
+        "key": "cmd+k cmd+u",
+        "command": "-editor.action.removeCommentLine",
+        "when": "editorTextFocus && !editorReadonly"
+    },
+    {
+        "key": "cmd+[Slash]",
+        "command": "editor.action.blockComment",
+        "when": "editorTextFocus && !editorReadonly"
+    },
+    {
+        "key": "shift+alt+a",
+        "command": "-editor.action.blockComment",
+        "when": "editorTextFocus && !editorReadonly"
+    },
+    {
+        "key": "` `",
+        "command": "workbench.action.terminal.focus"
+    },
+    {
+        "key": "` `",
+        "command": "workbench.action.focusActiveEditorGroup",
+        "when": "terminalFocus"
+    },
+    {
+        "key": "cmd+left",
+        "command": "workbench.action.terminal.focusPreviousPane",
+        "when": "terminalFocus"
+    },
+    {
+        "key": "alt+cmd+up",
+        "command": "-workbench.action.terminal.focusPreviousPane",
+        "when": "terminalFocus"
+    },
+    {
+        "key": "cmd+right",
+        "command": "workbench.action.terminal.focusNextPane",
+        "when": "terminalFocus"
+    },
+    {
+        "key": "alt+cmd+down",
+        "command": "-workbench.action.terminal.focusNextPane",
+        "when": "terminalFocus"
+    },
+    {
+        "key": "cmd+[BracketLeft]",
+        "command": "workbench.action.navigateLeft"
+    },
+    {
+        "key": "cmd+[BracketRight]",
+        "command": "workbench.action.navigateRight"
+    }
+]
