@@ -31,11 +31,11 @@
         "when": "editorTextFocus && !editorReadonly"
     },
     {
-        "key": "` `",
+        "key": "cmd+[Backquote]",
         "command": "workbench.action.terminal.focus"
     },
     {
-        "key": "` `",
+        "key": "cmd+[Backquote]",
         "command": "workbench.action.focusActiveEditorGroup",
         "when": "terminalFocus"
     },
@@ -66,5 +66,33 @@
     {
         "key": "cmd+[BracketRight]",
         "command": "workbench.action.navigateRight"
+    },
+    {
+        "key": "cmd+d",
+        "command": "-editor.action.addSelectionToNextFindMatch",
+        "when": "editorFocus"
+    },
+    {
+        "key": "cmd+d",
+        "command": "workbench.action.splitEditor"
+    },
+    {
+        "key": "ctrl+alt+cmd+[Backslash]",
+        "command": "-workbench.action.splitEditor"
+    },
+    {
+        "key": "cmd+d",
+        "command": "workbench.action.terminal.split",
+        "when": "terminalFocus"
+    },
+    {
+        "key": "ctrl+shift+5",
+        "command": "-workbench.action.terminal.split",
+        "when": "terminalFocus"
+    },
+    {
+        "key": "ctrl+alt+cmd+[Backslash]",
+        "command": "-workbench.action.terminal.split",
+        "when": "terminalFocus"
     }
 ]
