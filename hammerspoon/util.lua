@@ -87,7 +87,7 @@ menu = {
   {
     title = "-" -- separator
   },
-  {
+  --[[ {
     title = "Layout: Dorm",
     fn = function()
       applyLayout("Dorm", layoutDorm)
@@ -107,7 +107,20 @@ menu = {
     fn = function()
       applyLayout("Laptop", layoutLaptop)
     end
+  }, ]]
+  {
+    title = "Layout: Office",
+    fn = function()
+      applyLayout("Office", layoutOffice)
+    end
   },
+  {
+    title = "Layout: Room",
+    fn = function()
+      applyLayout("Room", layoutRoom)
+    end
+  },
+  
 }
 
 reloadMenu()

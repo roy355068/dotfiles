@@ -36,31 +36,42 @@ layoutLab = function()
   return ide, concat(left, right, mb)
 end
 
-layoutDorm = {
-  {'Google Chrome', nil, DORM_LEFT_MONITOR, u(0, 0, 1, 1), nil, nil, visible=true},
 
-  {'iTerm2', nil, DORM_RIGHT_MONITOR, u(0, 0, 1, 1), nil, nil, visible=true},
+google_chrome_windows = hs.application.get('Google Chrome'):allWindows()
+first = google_chrome_windows[1]:id()
+second = google_chrome_windows[2]:id()
+function google_chrome_geo(window)
+  if window:id() == first then
+    print("first chrome")
+    return hs.layout.left50
+      
+  elseif window:id() == second then
+    print("second chrome")
+    return hs.layout.right50
+  else
+    print("why are you here???")
+    return hs.layout.maximized
+  end
+end
 
-  {'Keybase', nil, MACBOOK_MONITOR, u(0, 0, 1/2, .60), nil, nil, visible=true},
-  {'Mail', nil, MACBOOK_MONITOR, u(0, .60, 1/2, .40), nil, nil, visible=true},
-  {'Things', nil, MACBOOK_MONITOR, u(1/2, 0, 1/2, 1), nil, nil, visible=true},
 
-  {'Spotify', nil, MACBOOK_MONITOR, u(0, 0, 1, 1), nil, nil, visible=false},
-  {'Calendar', nil, MACBOOK_MONITOR, u(0, 0, 1, 1), nil, nil, visible=false},
-  {'Slack', nil, MACBOOK_MONITOR, u(0, 0, 1, 1), nil, nil, visible=false},
-  {'Emacs', nil, DORM_RIGHT_MONITOR, u(0, 0, 1, 1), nil, nil, visible=false}
+layoutRoom = {
+  {'Google Chrome', nil, ROOM_LEFT_MONITOR, google_chrome_geo, nil, nil, visible=true},
+  {'Google Chrome', nil, ROOM_LEFT_MONITOR, google_chrome_geo, nil, nil, visible=true},
+  
+  
+  {'iTerm2', nil, ROOM_RIGHT_MONITOR, hs.layout.maximized, nil, nil, visible=false},
+  {'LINE', nil, ROOM_RIGHT_MONITOR, u(0, 0, 1, 0.2), nil, nil, visible=true},
+  {'WeChat', nil, ROOM_RIGHT_MONITOR, u(0, 0.2, 1, 0.4), nil, nil, visible=true},
+  {'Notion', nil, ROOM_RIGHT_MONITOR, u(0, 0.6, 1, 1), nil, nil, visible=true},
+  {'Code', nil, OFFICE_RIGHT_MONITOR, u(0, 0, 1, 1), nil, nil, visible=false},
 }
 
-layoutLaptop = {
-  {'Calendar', nil, MACBOOK_MONITOR, u(0, 0, 1, 1), nil, nil},
-  {'Emacs', nil, MACBOOK_MONITOR, u(0, 0, 1, 1), nil, nil},
-  {'Google Chrome', nil, MACBOOK_MONITOR, u(0, 0, 1, 1), nil, nil},
-  {'Mail', nil, MACBOOK_MONITOR, u(0, 0, 1, 1), nil, nil},
-  {'Slack', nil, MACBOOK_MONITOR, u(0, 0, 1, 1), nil, nil},
-  {'Spotify', nil, MACBOOK_MONITOR, u(0, 0, 1, 1), nil, nil},
-  {'Things', nil, MACBOOK_MONITOR, u(0, 0, 1, 1), nil, nil},
-  {'iTerm2', nil, MACBOOK_MONITOR, u(0, 0, 1, 1), nil, nil},
-  {'Keybase', nil, MACBOOK_MONITOR, u(0, 0, 1, 1), nil, nil}
+layoutOffice = {
+  {'Google Chrome', nil, OFFICE_LEFT_MONITOR, hs.layout.left75, nil, nil, visible=true},
+  {'iTerm2', nil, OFFICE_LEFT_MONITOR, hs.layout.right25, nil, nil, visible=true},
+  {'Code', nil, OFFICE_RIGHT_MONITOR, u(0, 0, 1, 1), nil, nil, visible=true},
+  
 }
 
 
@@ -85,6 +96,8 @@ applyLayout = function(name, layout)
         else
           app:hide()
         end
+      else
+        hs.application.launchOrFocus(name)
       end
     end
   end

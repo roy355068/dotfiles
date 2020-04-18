@@ -38,3 +38,31 @@ hs.hotkey.bind({'shift', 'cmd'}, 'h', hs.hints.windowHints)
 -- grid gui
 hs.grid.setMargins({w = 0, h = 0})
 hs.hotkey.bind({'shift', 'cmd'}, 'g', hs.grid.show)
+
+
+-- shortcut of window layouts
+local roomApps = {'iTerm', 'iTerm2', 'Line', 'WeChat', 'Notion'}
+local officeApps = {'iTerm', 'iTerm2', 'Visual Studio Code', 'Code'}
+
+function myLaunchApps(apps) 
+  for _, appName in pairs(apps) do
+    myLaunchApp(appName) 
+  end
+end
+
+function myLaunchApp(appName)
+  app = hs.application.find(appName)
+  if app == nil then
+    hs.application.launchOrFocus(appName)
+  end
+end
+
+hs.hotkey.bind({'alt', 'cmd'}, 'r', function()
+  myLaunchApps(roomApps)
+  applyLayout("Room", layoutRoom)
+end)
+
+hs.hotkey.bind({'alt', 'cmd'}, 'o', function() 
+  myLaunchApps(officeApps)
+  applyLayout("Office", layoutOffice)
+end)
