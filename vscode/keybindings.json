@@ -1,9 +1,8 @@
 // Place your key bindings in this file to override the defaultsauto[]
 [
     {
-        "key": "cmd+[Slash]",
-        "command": "editor.action.addCommentLine",
-        "when": "editorTextFocus && !editorReadonly"
+        "key": "cmd+/",
+        "command": "editor.action.addCommentLine"
     },
     {
         "key": "cmd+k cmd+c",
@@ -21,26 +20,16 @@
         "when": "editorTextFocus && !editorReadonly"
     },
     {
-        "key": "cmd+[Slash]",
-        "command": "editor.action.blockComment",
-        "when": "editorTextFocus && !editorReadonly"
-    },
-    {
-        "key": "shift+alt+a",
-        "command": "-editor.action.blockComment",
-        "when": "editorTextFocus && !editorReadonly"
-    },
-    {
-        "key": "cmd+[Backquote]",
+        "key": "` `",
         "command": "workbench.action.terminal.focus"
     },
     {
-        "key": "cmd+[Backquote]",
+        "key": "` `",
         "command": "workbench.action.focusActiveEditorGroup",
         "when": "terminalFocus"
     },
     {
-        "key": "cmd+left",
+        "key": "cmd+[",
         "command": "workbench.action.terminal.focusPreviousPane",
         "when": "terminalFocus"
     },
@@ -50,7 +39,7 @@
         "when": "terminalFocus"
     },
     {
-        "key": "cmd+right",
+        "key": "cmd+]",
         "command": "workbench.action.terminal.focusNextPane",
         "when": "terminalFocus"
     },
@@ -60,25 +49,34 @@
         "when": "terminalFocus"
     },
     {
-        "key": "cmd+[BracketLeft]",
-        "command": "workbench.action.navigateLeft"
-    },
-    {
-        "key": "cmd+[BracketRight]",
-        "command": "workbench.action.navigateRight"
-    },
-    {
-        "key": "cmd+d",
-        "command": "-editor.action.addSelectionToNextFindMatch",
+        "key": "cmd+[",
+        "command": "workbench.action.navigateLeft",
         "when": "editorFocus"
     },
     {
-        "key": "cmd+d",
-        "command": "workbench.action.splitEditor"
+        "key": "cmd+]",
+        "command": "workbench.action.navigateRight",
+        "when": "editorFocus"
     },
     {
-        "key": "ctrl+alt+cmd+[Backslash]",
-        "command": "-workbench.action.splitEditor"
+        "key": "cmd+[Slash]",
+        "command": "editor.action.commentLine",
+        "when": "editorTextFocus && !editorReadonly"
+    },
+    {
+        "key": "cmd+/",
+        "command": "-editor.action.commentLine",
+        "when": "editorTextFocus && !editorReadonly"
+    },
+    {
+        "key": "shift+alt+a",
+        "command": "-editor.action.blockComment",
+        "when": "editorTextFocus && !editorReadonly"
+    },
+    {
+        "key": "cmd+w",
+        "command": "workbench.action.terminal.kill",
+        "when": "terminalFocus"
     },
     {
         "key": "cmd+d",
@@ -86,12 +84,7 @@
         "when": "terminalFocus"
     },
     {
-        "key": "ctrl+shift+5",
-        "command": "-workbench.action.terminal.split",
-        "when": "terminalFocus"
-    },
-    {
-        "key": "ctrl+alt+cmd+[Backslash]",
+        "key": "cmd+\\",
         "command": "-workbench.action.terminal.split",
         "when": "terminalFocus"
     }
