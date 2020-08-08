@@ -11,3 +11,8 @@ Place the .json files in
 ### macServicesPref
 Place the .plist files in 
 `~/Library/Preferences/`
+
+### Vim
+
+- Monokai theme
+    https://github.com/sickill/vim-monokai
