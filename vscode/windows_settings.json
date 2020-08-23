@@ -1,0 +1,16 @@
+{
+    "workbench.colorTheme": "Monokai Pro",
+    "workbench.iconTheme": "Monokai Pro Icons",
+    "terminal.integrated.shell.windows": "C:\\Program Files\\Git\\bin\\bash.exe",
+    "editor.formatOnSave": true,
+    "files.autoSave": "onFocusChange",
+    "scm.inputFontFamily": "hack",
+    "terminal.integrated.automationShell.windows": "/usr/bin/bash",
+    "terminal.integrated.shellArgs.windows": [
+        "-l"
+    ],
+    "[csharp]": {
+        "editor.defaultFormatter": "Leopotam.csharpfixformat"
+    },
+    "csharpfixformat.style.spaces.beforeParenthesis": false
+}
