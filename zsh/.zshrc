@@ -138,6 +138,7 @@ export PATH=$HOME/.toolbox/bin:$PATH
 alias py="python3"
 alias eb="einkbear"
 alias ebs="einkbear shell"
+alias ebp="einkbear push"
 alias bb="brazil-build"
 alias bbe="brazil-build --platform eink"
 #export EDITOR=vim
