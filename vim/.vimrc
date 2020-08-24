@@ -16,6 +16,7 @@ set backspace=2
 set shiftwidth=4
 set softtabstop=4
 set expandtab
+set hlsearch
 "set smarttab
 set nu
 "highlight lines longer than 80 columns
@@ -34,3 +35,16 @@ set statusline=%1*%f%m%r\ line:\ %l\ /\ %L\ (%p%%),\ col:\ %c%=%y\ [%{&fenc!=''?
 "set termencoding=big5
 "set fileencodings=big5
 "set ambiwidth=double
+
+" Map jk as escape key for exiting INSERT mode
+inoremap jk <ESC>
+" Use space as the leader key
+let mapleader = " "
+" Remap Capslock as Control key
+filetype plugin indent on
+syntax on
+set encoding=utf-8
+set clipboard=unnamedplus
+
+" <Ctrl-l> redraws the screen and removes any search highlighting
+nnoremap <leader>c :nohl<CR>
