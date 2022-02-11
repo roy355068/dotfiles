@@ -1,27 +1,68 @@
 {
+    "telemetry.telemetryLevel": "off",
     "workbench.colorTheme": "Monokai",
     "editor.fontSize": 14,
     "editor.suggestSelection": "first",
+    "terminal.integrated.fontFamily": "Menlo for Powerline",
+    "terminal.integrated.fontSize": 14,
+    "terminal.integrated.fontWeight": "normal",
+    "terminal.integrated.fontWeightBold": "bold",
     "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
-    "java.configuration.checkProjectSettingsExclusions": false,
-    "window.zoomLevel": 0,
     "terminal.integrated.shell.osx": "/bin/zsh",
-    "python.jediEnabled": false,
     "workbench.tree.indent": 20,
-    "files.autoSave": "onFocusChange",
-    "editor.quickSuggestions": null,
-    "python.languageServer": "Microsoft",
-    "java.semanticHighlighting.enabled": false,
-    "[typescriptreact]": {
-        "editor.formatOnSave": true,
-        "editor.codeActionsOnSave": {
-            "source.fixAll": true
-        }
+    "workbench.colorCustomizations" : {
+        "terminal.foreground" : "#e0e0e0",
+        "terminal.ansiBlack": "#212121",
+        "terminal.ansiRed": "#f82a71",
+        "terminal.ansiGreen": "#a6e12d",
+        "terminal.ansiYellow": "#ffa727",
+        "terminal.ansiBlue": "#66d8ee",
+        "terminal.ansiMagenta": "#f82a71",
+        "terminal.ansiCyan": "#66d8ee",
+        "terminal.ansiWhite": "#cfcfc1",
+
+        "terminal.ansiBrightBlack": "#74705d",
+        "terminal.ansiBrightRed": "#f82a71",
+        "terminal.ansiBrightGreen": "#a6e12d",
+        "terminal.ansiBrightYellow": "#e6db73",
+        "terminal.ansiBrightBlue": "#ae80fe",
+        "terminal.ansiBrightMagenta": "#f82a71",
+        "terminal.ansiBrightCyan": "#66d8ee",
+        "terminal.ansiBrightWhite": "#f7f7f1",
+
+    },
+    "editor.quickSuggestions": true,
+    "python.languageServer": "Default",
+    "C_Cpp.updateChannel": "Insiders",
+    "[cpp]": {
+        "editor.defaultFormatter": "ms-vscode.cpptools",
+        "editor.wordBasedSuggestions": false,
+        "editor.suggest.insertMode": "replace",
+        "editor.semanticHighlighting.enabled": true
     },
     "[javascript]": {
-        "editor.formatOnSave": true,
-        "editor.codeActionsOnSave": {
-            "source.fixAll": true
-        }
-    }
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "[typescript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "cmake.configureOnOpen": true,
+    "bracket-pair-colorizer-2.showBracketsInRuler": true,
+    "prettier.tabWidth": 4,
+    "workbench.editor.enablePreview": false,
+    "files.autoSave": "onFocusChange",
+    "workbench.editorAssociations": {
+        "*.ipynb": "jupyter-notebook"
+    },
+    "C_Cpp.default.cppStandard": "c++11",
+    "security.workspace.trust.untrustedFiles": "open",
+    "timeline.excludeSources": [],
+    "notebook.cellToolbarLocation": {
+        "default": "right",
+        "jupyter-notebook": "left"
+    },
+    "editor.formatOnSave": true,
+    "editor.detectIndentation": false,
+    "bracket-pair-colorizer-2.depreciation-notice": false
 }
